@@ -1,1 +1,1 @@
-module.exports = require('countingup/lib')
+module.exports = require('./lib/index')

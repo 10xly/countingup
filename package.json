@@ -1,12 +1,14 @@
 {
   "name": "countingup",
-  "version": "0.2.5",
-  "description": "Counter Class for JavaScrippt",
+  "version": "0.3.0",
+  "description": "Counter Class for JavaScript",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "mocha index.test.js"
+  },
   "author": "Samuel Fox J.",
   "license": "UNLICENSED",
   "keywords": [
@@ -23,5 +25,21 @@
   "bugs": {
     "url": "https://github.com/tj-commits/countingup/issues"
   },
-  "homepage": "https://github.com/tj-commits/countingup#readme"
+  "homepage": "https://github.com/tj-commits/countingup#readme",
+  "dependencies": {
+    "@is-(unknown)/is-finite": "^1.0.0",
+    "@is-(unknown)/is-nil": "^1.2.0",
+    "@positive-numbers/one": "^3.0.0",
+    "@positive-numbers/zero": "^3.0.0",
+    "es-logical-not-operator": "^1.0.0",
+    "es-logical-or-operator": "^1.0.0",
+    "immediate-error": "^7.1.0",
+    "is-integer": "^1.0.7",
+    "is-null": "^1.0.1",
+    "switch-in-fp": "^3.0.0"
+  },
+  "devDependencies": {
+    "chai": "^6.2.2",
+    "mocha": "^11.7.5"
+  }
 }
