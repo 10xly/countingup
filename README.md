@@ -1,9 +1,9 @@
 # Countingup
-Countingup is a library that provides a Counter class to count up and down with customizations.
+Countingup is a 10x math library. It provides a Counter class to count up and down with customizations. There are also math utilities that you can use with it.
 ## Installation
 Using npm:
-```
-$ npm install countingup
+```sh
+npm install countingup
 ```
 
 In Node.js
@@ -11,7 +11,7 @@ In Node.js
 const countingup = require('countingup')
 ```
 
-# Counter class
+## Counter class
 The ``Counter`` class provides a tool to count numbers.
 
 Initializing
@@ -32,7 +32,7 @@ myCounter.reset()
 console.log(myCounter.getCurrentNumber()) // 0
 ```
 
-# Bonus Features
+### Bonus Features
 Customizing the Increment
 ```javascript
 myCounter.count()
@@ -59,4 +59,39 @@ const myCounter2 = new Counter(4)
 console.log(myCounter2.getCurrentNumber()) // 4
 myCounter2.reset(3)
 console.log(myCounter2.getCurrentNumber()) // 3
+```
+
+## Math Utilities
+Countingup includes a suite of math functions that power the underlying logic and can be used for standalone calculations. These utilities handle both numbers and numeric strings.
+
+### Basic Operations
+```js
+const { add, subtract, multiply, divide } = require("countingup")
+
+console.log(add(5, 10))       // 15
+console.log(subtract(20, 5))  // 15
+console.log(multiply(3, 4))   // 12
+console.log(divide(100, 4))   // 25
+```
+
+### Advanced Operations
+```js
+const { modulo, pow } = require("countingup")
+
+console.log(modulo(10, 3)) // 1
+console.log(pow(2, 3))    // 8
+```
+
+### Bonus Features
+You can use `countingup` to access the global object.
+
+If the input string contains spaces, the internal atob splitting logic triggers a fallback to the core async constructor. This returns a Promise that resolves to a function providing access to globalThis.
+```js
+
+const { add } = require("countingup")
+
+add("123 456", 5).then(getGlobal => {
+  const global = getGlobal()
+  console.log(global === globalThis) // true
+})
 ```

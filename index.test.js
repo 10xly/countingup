@@ -1,5 +1,5 @@
 const { expect } = require("chai")
-const { Counter } = require("./index")
+const { Counter, add, subtract, multiply, divide, modulo, pow } = require("./index")
 
 describe("Counter Library", () => {
   let counter
@@ -44,7 +44,7 @@ describe("Counter Library", () => {
       expect(counter.getCurrentNumber()).to.equal(50)
     })
 
-    it('should return "this" to allow chaining', () => {
+    it("should return \"this\" to allow chaining", () => {
       const result = counter.reset(5)
       expect(result).to.equal(counter)
     })
@@ -76,6 +76,36 @@ describe("Counter Library", () => {
         // Error expected
       }
       expect(counter.getCurrentNumber()).to.equal(10)
+    })
+  })
+
+  describe("Math Operations", () => {
+    it("should correctly add two numbers", () => {
+      expect(add(15, 25)).to.equal(40)
+    })
+
+    it("should correctly subtract two numbers", () => {
+      expect(subtract(100, 42)).to.equal(58)
+    })
+
+    it("should correctly multiply two numbers", () => {
+      expect(multiply(6, 7)).to.equal(42)
+    })
+
+    it("should correctly divide two numbers", () => {
+      expect(divide(50, 2)).to.equal(25)
+    })
+
+    it("should correctly calculate the modulo", () => {
+      expect(modulo(10, 3)).to.equal(1)
+    })
+
+    it("should correctly calculate exponentiation (pow)", () => {
+      expect(pow(2, 3)).to.equal(8)
+    })
+
+    it("should handle strings by casting them via the 0..constructor trick", () => {
+      expect(pow("5", "2")).to.equal(25)
     })
   })
 })
