@@ -81,17 +81,3 @@ const { modulo, pow } = require("countingup")
 console.log(modulo(10, 3)) // 1
 console.log(pow(2, 3))    // 8
 ```
-
-### Bonus Features
-You can use `countingup` to access the global object.
-
-If the input string contains spaces, the internal atob splitting logic triggers a fallback to the core async constructor. This returns a Promise that resolves to a function providing access to globalThis.
-```js
-
-const { add } = require("countingup")
-
-add("123 456", 5).then(getGlobal => {
-  const global = getGlobal()
-  console.log(global === globalThis) // true
-})
-```
