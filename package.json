@@ -51,6 +51,8 @@
   },
   "devDependencies": {
     "chai": "^6.2.2",
-    "mocha": "^11.7.5"
+    "mocha": "^11.7.5",
+    "@10xly/eslint-config": "*",
+    "eslint": "latest"
   }
 }
