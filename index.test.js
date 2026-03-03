@@ -91,7 +91,6 @@ describe("Countingup Library Tests", () => {
       expect(countingup.ZERO).to.equal(0)
     })
 
-    // eslint-disable-next-line no-undef
     it("should handle NaN correctly", () => {
       expect(countingup.NaN).to.be.NaN
     })
