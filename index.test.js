@@ -1,4 +1,3 @@
-// eslint-disable-next-line unicorn/no-abusive-eslint-disable
 /* eslint-disable */
 const { expect } = require("chai")
 const countingup = require(".")
