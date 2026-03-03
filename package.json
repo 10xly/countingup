@@ -53,6 +53,6 @@
     "chai": "^6.2.2",
     "mocha": "^11.7.5",
     "@10xly/eslint-config": "^1.0.2",
-    "eslint": "latest"
+    "eslint": "^9.39.3"
   }
 }
